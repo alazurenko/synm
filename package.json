@@ -1,0 +1,31 @@
+{
+  "name": "synm",
+  "version": "0.1.0",
+  "description": "CLI tools for getting synonyms",
+  "main": "index.js",
+  "bin": {
+    "synm": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alazurenko/synm.git"
+  },
+  "keywords": [
+    "synonym",
+    "word",
+    "english",
+    "dictionary",
+    "thesaurus"
+  ],
+  "author": "Andrii Lazurenko (andrey.lazurenko@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alazurenko/synm/issues"
+  },
+  "homepage": "https://github.com/alazurenko/synm#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "request": "^2.80.0"
+  }
+}
