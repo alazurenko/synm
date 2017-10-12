@@ -3,13 +3,14 @@
 > CLI tool for getting synonyms
 
 With a given tool you can easily find a synonym for a word
-Based on [Big Huge Thesaurus](http://words.bighugelabs.com/) API 
+
+Based on [Big Huge Thesaurus](http://words.bighugelabs.com/) API
 
 
 ## Install
 `npm i -g synm`
 
-## How to use 
+## How to use
 `synm [word]`
 
 ### Example
@@ -33,4 +34,4 @@ lie
 [MIT](https://opensource.org/licenses/mit-license.php)
 
 ## Author
-Made with love by [Andrii Lazurenko](https://twitter.com/andriilazurenko)
+Made with love by [Andrii Lazurenko](https://twitter.com/a_lazurenko)

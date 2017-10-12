@@ -16,12 +16,12 @@ let heading = chalk.white.bgBlack.underline.bold;
 let text = chalk.yellow
 
 /**
- * Creates a text based on a given array of words 
+ * Creates a text based on a given array of words
  * @param {Array} arr - Array of words
  * @returns {String}
  */
 function prepareText(arr) {
-    return arr.reduce((prev, current, idx, arr) => { 
+    return arr.reduce((prev, current, idx, arr) => {
         // If word is last don't put comma, also separate lines with WORDS_PER_LINE
         let isLineBreak = ((idx % WORDS_PER_LINE === 0) && (idx !== 0)) ? true : false;
         let separator = (idx === arr.length - 1) ? '' : `,  ${(isLineBreak) ? '\n' : ''}`;
@@ -31,7 +31,7 @@ function prepareText(arr) {
 
 /**
  * Prints synonyms to the console
- * @param {String} title - Heading of a paragraph 
+ * @param {String} title - Heading of a paragraph
  * @param {Array} arr - Array of associated words
  */
 function print(title, arr) {
@@ -51,9 +51,9 @@ function print(title, arr) {
 
 /**
  * Handles response from API
- * @param {Object} err 
- * @param {Object} res 
- * @param {String} body 
+ * @param {Object} err
+ * @param {Object} res
+ * @param {String} body
  */
 function handleResponse(err, res, body) {
     if(err) { log(err) }
@@ -69,20 +69,21 @@ function handleResponse(err, res, body) {
 /**
  * Makes URL to the api with a give word
  * @param {String} word
- * @returns {String} - Constructed url 
+ * @returns {String} - Constructed url
  */
 let makeUrl = word => `${ cfg.api }/${ cfg.version }/${ API_KEY }/${ word }/${ cfg.format }`;
 
 /**
  * Makes a call to API with a given word
- * @param {String} word 
+ * @param {String} word
  */
 function lookup(word) {
-    request(makeUrl(word), handleResponse);    
+    request(makeUrl(word), handleResponse);
 }
 
 // Register commands for cli
 command
+    .version(require(`${__dirname}/package.json`).version)
     .arguments('word')
     .action(lookup)
     .parse(process.argv)
