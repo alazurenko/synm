@@ -34,4 +34,4 @@ lie
 [MIT](https://opensource.org/licenses/mit-license.php)
 
 ## Author
-Made with love by [Andrii Lazurenko](https://twitter.com/a_lazurenko)
+Made with love by [Andrii Lazurenko](https://twitter.com/andriilazurenko)
